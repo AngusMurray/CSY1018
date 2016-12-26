@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css" />
+    <!--this link this page to a CSS file-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--this sets the width of the webpage to the devices native width-->
+</head>
+
+<body>
+    <!-- This is the form for my Contact page, I left the "action" method blank becuase I won't be using server side validation-->
+    <form class="Contact_form" action="" method="post" name="Contact_form">
+        <ul>
+            <li>
+                <h2>Contact Me</h2>
+                <!-- This is the title of the form itself-->
+                <span class="required_notification">* Denotes required information</span>
+                <!--This is a small, single line message to tell people that an * is required information, hence why I used a "span" element-->
+                <!-- I used a combination of unordered lists and list items to help keep the page structured and easier to read-->
+            </li>
+            <!-- list item-->
+        </ul>
+        <!--Unordered List-->
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" name="Name" placeholder="John Smith" required />
+            <!--This is the text box in which users will enter information;
+            Input type defines what information is entered,'placeholde' is text already text boxes to show users how to write the information and 'required' means that the field cannot be empty-->
+        </li>
+        <li>
+            <label for="email">Email:</label>
+            <input type="email" name="Email" placeholder="john_smith@example.co.uk" required />
+            <!--type="email" means that the informtion is in the form of an email address-->
+
+        </li>
+        <li>
+
+            <label for="Subject"> Subject:</label>
+            <input type="text" name="Subject" placeholder="Enter Text" required />
+
+        </li>
+        <li>
+            <label for="Message">Message:</label>
+            <textarea name="Message" cols="40" rows="6" required></textarea>
+            <!-- I used this to define a large text field for users to write in, it is 40 columns high and 6 rows long-->
+
+        </li>
+        <li>
+            <button class="Submit" type="Submit"> Sumbit</button>
+            <!-- I created a simple button using this code-->
+        </li>
+    </form>
+
+</body>
+
+</html>
