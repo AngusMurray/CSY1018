@@ -1,0 +1,210 @@
+*:focus {
+    outline: none;
+}
+
+
+/* I used this focus to override the default styling used by webkit*/
+
+body {
+    font: 1.000em/1.313em "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+.Contact_form h2, .Contact_form label {
+    font-family: Georgia, Times, "Time New Roman", serif;
+}
+
+.form_hint, .required_notification {
+    font-size: 0.688em;
+}
+
+
+/* This block(above) of CSS is all about typography, font size, family for each section*/
+
+.Contact_form ul {
+    /* This along with others css sections is used to better structure the form itself, this order anything within a ul element*/
+    width: 750px;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Contact_form li {
+    /* this section structures anything within a li element by adding spacing*/
+    list-style-type: none;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.Contact_form li:first-child, .Contact_form li:last-child {
+    /* This creates a line above & below the form. First li to the last li*/
+    border-bottom: 1px solid #777;
+    /* This is the style of border, thin, solid line*/
+}
+
+.Contact_form h2 {
+    /*Basic style for anything under heading 2*/
+    margin: 0px;
+    display: inline;
+}
+
+.required_notification {
+    /* More basic styling to notifications*/
+    color: #d45252;
+    margin: 5px 0 0 0;
+    display: inline;
+    float: right;
+}
+
+.Contact_form label {
+    width: 150px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+    padding: 3px;
+}
+
+.Contact_form input {
+    height: 20px;
+    width: 220px;
+    padding: 5px 8px;
+}
+
+.Contact_form textarea {
+    padding: 8px;
+    width: 300px;
+}
+
+.Contact_form button {
+    margin-left: 156px;
+}
+
+.Contact_form input, .Contact_form textarea {
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius: 2px;
+    padding-right: 70px;
+    -moz-transition: padding .25s;
+    /* style for various web browsers, each one has a different type of webkit, and use different words*/
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+
+.Contact_form input:focus, .Contact_form textarea:focus {
+    /*I styled two areas with the same css*/
+    background: #fff;
+    border: 1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+}
+
+
+/*button styling, utilising the various webkits for each browser, giving the button shadow and colour*/
+
+button.submit {
+    background-color: #68b12f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+    background: -moz-linear-gradient(top, #68b12f, #50911e);
+    background: -ms-linear-gradient(top, #68b12f, #50911e);
+    background: -o-linear-gradient(top, #68b12f, #50911e);
+    background: linear-gradient(top, #68b12f, #50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+button.submit:hover {
+    /*appearance of the button when hovered over*/
+    opacity: .85;
+    cursor: pointer;
+}
+
+button.submit:active {
+    /*appearance of the button when clicked on*/
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+    -webkit-box-shadow: 0 0 10px 5px #356b0b inset;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+.Contact_form input, .Contact_form textarea {
+    padding-right: 30px;
+}
+
+.Contact_form input:required, .Contact_form textarea:required {
+    background: #fff url(img/Red_Asterisk.png) no-repeat 98% center;
+}
+
+.Contact_form input:focus:invalid, .Contact_form textarea:focus:invalid {
+    background: #fff url(img/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535;
+}
+
+
+/* when a field is considered invalid by the browser */
+
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+    /* when a field is considered valid by the browser */
+    background: #fff url(img/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+.form_hint {
+    background: #d45252;
+    border-radius: 3px 3px 3px 3px;
+    color: white;
+    margin-left: 8px;
+    padding: 1px 6px;
+    z-index: 999;
+    /*hints stay above all other elements*/
+    position: relative;
+    display: none;
+    /* I set display to none becuase I only want the hints to show the user focuses on the input fields*/
+}
+
+.form_hint::before {
+    content: "&#x25C0";
+    /*left point triangle in unicode*/
+    color: #d45252;
+    position: relative;
+    top: 1px;
+    left: -6px;
+}
+
+.contact_form input:focus+.form_hint {
+    display: inline;
+}
+
+.contact_form input:required:valid+.form_hint {
+    background: #28921f;
+}
+
+
+/* change form hint color when valid */
+
+.contact_form input:required:valid+.form_hint::before {
+    color: #28921f;
+}
+
+
+/* change form hint arrow color when valid */
