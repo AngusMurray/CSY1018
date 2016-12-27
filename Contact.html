@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-UK">
 
 <head>
     <meta charset="utf-8">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <!--this link this page to a CSS file-->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--this sets the width of the webpage to the devices native width-->
 </head>
 
 <body>
+  <header>
+      <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">Curriculum Vitae</a></li>
+            <li><a href="Bio.html">Biography</a></li>
+            <li><a href="Contact.html">Contact Me</a></li>
+          </ul>
+      </nav>
+  </header>
+
     <!-- This is the form for my Contact page, I left the "action" method blank becuase I won't be using server side validation-->
     <form class="Contact_form" action="" method="post" name="Contact_form">
         <ul>
@@ -33,6 +45,7 @@
         <li>
             <label for="email">Email:</label>
             <input type="email" name="Email" placeholder="john_smith@example.co.uk" required />
+
             <!--type="email" means that the informtion is in the form of an email address-->
 
         </li>
@@ -49,10 +62,28 @@
 
         </li>
         <li>
-            <button class="Submit" type="Submit"> Sumbit</button>
+            <button class="Submit" type="Submit"> Submit</button>
             <!-- I created a simple button using this code-->
         </li>
     </form>
+    <footer>
+        <div id="footer-infomation">
+            <p>
+                This site was made by Angus Murray, a student at Northampton University<br />
+              All images used on this website are all copyright free.</p>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li>
+                    <h5>Site Map</h5></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="Contact.html">Contact Me</a></li>
+                <li><a href="Bio.html">Bio</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </footer>
 
 </body>
 
