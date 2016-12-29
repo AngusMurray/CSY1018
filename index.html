@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-UK">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Angus' Online Portolio</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/index.css"/>
+    <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <!-- This links the page to a css file -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -16,84 +16,92 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="cv.html">Curriculum Vitae</a></li>
                 <li><a href="Bio.html">Biography</a></li>
                 <li><a href="Contact.html">Contact Me</a></li>
             </ul>
         </nav>
+        <span class="icon_01"> <a href="https://www.facebook.com"><img src="./img/icons/fb_logo.png" alt="Facebook" /></a></span>
+        <span class="icon_02"> <a href="https://github.com/AngusMurray/CSY1018"><img src="./img/icons/GitHub-Mark.png" alt="Github" /></a></span>
+        <span class="icon_03"> <a href="https://plus.google.com/u/0/116856708203377232449"><img src="./img/icons/Google-plus-logo.JPG" alt="Google Plus" /></a></span>
     </header>
-    <div id="hero-image">
-        <h2 class="strong">I'm Angus Murray<br />
+    <div class="page_wrap">
+
+
+        <div id="hero-image">
+            <h2 class="strong">I'm Angus Murray<br /> <!--This is a break i used to seperate the text properly on two seperate links -->
         This is my website</h2>
-    </div>
-    <div id="features">
-        <div class="wrapper">
-            <ul>
-                <li class="feature-1">
-                    <h4><a href="https://github.com/AngusMurray/CSY1018" title="Social web development" id="github-logo">My Github</a></h4>
+        </div>
+        <div id="features">
+            <div class="wrapper">
+                <ul>
+                    <li class="feature-1">
+                        <!-- This section has three titles each one links to a different social media page-->
+                        <h4><a href="https://github.com/AngusMurray/CSY1018" title="Social web development" id="github-logo">My Github</a></h4>
+                        <p>
+                            A bunch of random words cobbled together by somone with dylexia, enjoy.
+                        </p>
+                    </li>
+                    <li class="feature-2">
+                        <h4><a href="https://plus.google.com/u/0/116856708203377232449" title="Social web development" id="Google-logo">My Google +</a></h4>
+                        <p>
+                            The continuation of these randon words. This is going better than expected.
+                        </p>
+                    </li>
+                    <li class="feature-3">
+                        <h4><a href="https://www.facebook.com/" title="Social web development" id="Facebook-logo">My Facebook</a></h4>
+                        <p>
+                            The final chapter in this series of random words. I hope you enjoyed this, i know i did.
+                        </p>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <div id="primary-content">
+            <article>
+                <h3>featured content</h3>
+                <p>
+                    Oh Hello, i see you stayed around well it's nice to have you here.
+                </p>
+                <a href="#"><img src="img/Red_Asterisk.png" alt="placeholder image" /></a>
+                <!-- using an image along with alt text for screen readers-->
+            </article>
+        </div>
+        <div id="secondary-content">
+            <article>
+                <div class="overlay-1">
+                    <h4>Secondary Content</h4>
                     <p>
-                        A bunch of random words cobbled together by somone with dylexia, enjoy.
+                        Here we are again, back to the ol' grind stone. Really don't see why you're still here?
                     </p>
-                </li>
-                <li class="feature-2">
-                    <h4><a href="https://plus.google.com/u/0/116856708203377232449" title="Social web development" id="Google-logo">My Google +</a></h4>
+                    <a href="#" class="more-link">view more</a>
+                </div>
+            </article>
+            <article>
+                <div class="overlay-2">
+                    <h4>Secondary content</h4>
                     <p>
-                        The continuation of these randon words. This is going better than expected.
+                        sup, i have nothing else to say, i ran out of ideas
                     </p>
-                </li>
-                <li class="feature-3">
-                    <h4><a href="https://www.facebook.com/" title="Social web development" id="Facebook-logo">My Facebook</a></h4>
-                    <p>
-                        The final chapter in this series of random words. I hope you enjoyed this, i know i did.
-                    </p>
-                </li>
-                <div class="clear"></div>
-            </ul>
+                    <a href="#" class="more-link">view more</a>
+                </div>
+            </article>
+            <div class="clear"></div>
+        </div>
+        <div id="cta">
+            <h3> Heard enough?</h3>
+            <p>
+                Right. Piss of now, go somewhere.
+            </p>
+            <a href="#" class="button-2">Get started</a>
         </div>
     </div>
-    <div id="primary-content">
-        <article>
-            <h3>featured content</h3>
-            <p>
-                Oh Hello, i see you stayed around well it's nice to have you here.
-            </p>
-            <a href="#"><img src="img/Red_Asterisk.png" alt="placeholder image" /></a>
-        </article>
-    </div>
-    <div id="secondary-content">
-        <article>
-            <div class="overlay-1">
-                <h4>Secondary Content</h4>
-                <p>
-                    Here we are again, back to the ol' grind stone. Really don't see why you're still here?
-                </p>
-                <a href="#" class="more-link">view more</a>
-            </div>
-        </article>
-        <article>
-            <div class="overlay-2">
-                <h4>Secondary content</h4>
-                <p>
-                    sup, i have nothing else to say, i ran out of ideas
-                </p>
-                <a href="#" class="more-link">view more</a>
-            </div>
-        </article>
-        <div class="clear"></div>
-    </div>
-    <div id="cta">
-        <h3> Heard enough?</h3>
-        <p>
-            Right. Piss of now, go somewhere.
-        </p>
-        <a href="#" class="button-2">Get started</a>
-    </div>
-    <footer>
+    <footer class="site_footer">
         <div id="footer-infomation">
             <p>
-                This site was made by Angus Murray, a student at Northampton University<br />
-              All images used on this website are all copyright free.</p>
+                This site was made by Angus Murray, a student at Northampton University<br /> All images used on this website are all copyright free.</p>
         </div>
         <div id="footer-links">
             <ul>
@@ -105,7 +113,6 @@
                 <li><a href="Bio.html">Bio</a></li>
             </ul>
         </div>
-        <div class="clear"></div>
     </footer>
 </body>
 

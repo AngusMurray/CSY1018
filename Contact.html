@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-UK">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Contact Me</title>
-    <link rel="stylesheet" type="text/css "href="./CSS/contact.css" />
+    <link rel="stylesheet" type="text/css " href="./CSS/contact.css" />
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <!--this link this page to a CSS file-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -12,65 +12,74 @@
 </head>
 
 <body>
-  <header>
-      <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">Curriculum Vitae</a></li>
-            <li><a href="Bio.html">Biography</a></li>
-            <li><a href="Contact.html">Contact Me</a></li>
-          </ul>
-      </nav>
-  </header>
+    <div class="page_wrap">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">Curriculum Vitae</a></li>
+                    <li><a href="Bio.html">Biography</a></li>
+                    <li><a class="active" href="Contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+            <!-- Three span tags used to seperate out the social media icons. -->
+            <span class="icon_01"> <a href="https://www.facebook.com"><img src="./img/icons/fb_logo.png" alt="Facebook" /></a></span>
+            <span class="icon_02"> <a href="https://github.com/AngusMurray/CSY1018"><img src="./img/icons/GitHub-Mark.png" alt="Github" /></a></span>
+            <span class="icon_03"> <a href="https://plus.google.com/u/0/116856708203377232449"><img src="./img/icons/Google-plus-logo.JPG" alt="Google Plus" /></a></span>
+        </header>
 
-    <!-- This is the form for my Contact page, I left the "action" method blank becuase I won't be using server side validation-->
-    <form class="Contact_form" action="" method="post" name="Contact_form">
-        <ul>
-            <li>
-                <h2>Contact Me</h2>
-                <!-- This is the title of the form itself-->
-                <span class="required_notification">* Denotes required information</span>
-                <!--This is a small, single line message to tell people that an * is required information, hence why I used a "span" element-->
-                <!-- I used a combination of unordered lists and list items to help keep the page structured and easier to read-->
-            </li>
-            <!-- list item-->
-        </ul>
-        <!--Unordered List-->
-        <li>
-            <label for="name">Name:</label>
-            <input type="text" name="Name" placeholder="John Smith" required />
-            <!--This is the text box in which users will enter information;
+        <!-- This is the form for my Contact page, I left the "action" method blank becuase I won't be using server side validation-->
+        <div id="Form_container">
+            <form class="Contact_form" action="" method="post" name="Contact_form">
+                <ul class="Flex-outer">
+                    <li>
+                        <h2>Contact Me</h2>
+                        <p>
+                          Please fill out this form if you wish to contact me, thank you.
+                        </p>
+                        <!-- This is the title of the form itself-->
+                        <span class="required_notification">* Required information</span>
+                        <!--This is a small, single line message to tell people that an * is required information, hence why I used a "span" element-->
+                        <!-- I used a combination of unordered lists and list items to help keep the page structured and easier to read-->
+                    </li>
+                    <!-- list item-->
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" name="Name" placeholder="John Smith" required />
+                        <!--This is the text box in which users will enter information;
             Input type defines what information is entered,'placeholde' is text already text boxes to show users how to write the information and 'required' means that the field cannot be empty-->
-        </li>
-        <li>
-            <label for="email">Email:</label>
-            <input type="email" name="Email" placeholder="john_smith@example.co.uk" required />
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" name="Email" placeholder="john_smith@example.co.uk" required />
 
-            <!--type="email" means that the informtion is in the form of an email address-->
+                        <!--type="email" means that the informtion is in the form of an email address-->
 
-        </li>
-        <li>
+                    </li>
+                    <li>
 
-            <label for="Subject"> Subject:</label>
-            <input type="text" name="Subject" placeholder="Enter Text" required />
+                        <label for="Subject"> Subject:</label>
+                        <input type="text" name="Subject" placeholder="Enter Text" required />
 
-        </li>
-        <li>
-            <label for="Message">Message:</label>
-            <textarea name="Message" cols="40" rows="6" required></textarea>
-            <!-- I used this to define a large text field for users to write in, it is 40 columns high and 6 rows long-->
+                    </li>
+                    <li>
+                        <label for="Message">Message:</label>
+                        <textarea name="Message" cols="40" rows="6" required></textarea>
+                        <!-- I used this to define a large text field for users to write in, it is 40 columns high and 6 rows long-->
 
-        </li>
-        <li>
-            <button class="Submit" type="Submit"> Submit</button>
-            <!-- I created a simple button using this code-->
-        </li>
-    </form>
-    <footer>
+                    </li>
+                    <div class="submit">
+                        <button type="Submit" id="button_01">Send</button>
+                        <!-- I created a simple button using this code-->
+                    </div>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <footer class="site_footer">
         <div id="footer-infomation">
             <p>
-                This site was made by Angus Murray, a student at Northampton University<br />
-              All images used on this website are all copyright free.</p>
+                This site was made by Angus Murray, a student at Northampton University<br /> All images used on this website are all copyright free.</p>
         </div>
         <div id="footer-links">
             <ul>
@@ -80,9 +89,9 @@
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="Contact.html">Contact Me</a></li>
                 <li><a href="Bio.html">Bio</a></li>
+                <!-- Site map with internal site links-->
             </ul>
         </div>
-        <div class="clear"></div>
     </footer>
 
 </body>

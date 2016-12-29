@@ -1,7 +1,15 @@
 *:focus {
     outline: none;
 }
+
+
 /* I used this focus to override the default styling used by webkit*/
+
+html, body {
+    height: 100%;
+    /* This is used to define the height of my html so it can take up all available space*/
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -14,13 +22,36 @@ body {
 header {
     height: 120px;
 }
+
 a {
-	text-decoration: none;
-	color: #444;
+    text-decoration: none;
+    color: #444;
+}
+ul {
+    list-style: none;
+}
+h2{
+  border-bottom: 1px solid #777;
+}
+h5 {
+    font-size: 0.938em;
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 a:hover {
-	color: #02b8dd;
+    color: #009688;
+}
+.icon_01, .icon_02, .icon_03{ /* This is the layout for the icons on each page*/
+  margin: 0;
+  padding: 10px;
+  display: inline-flex;
+  flex-wrap: wrap;
+
+}
+.icon_01, .icon_02, .icon_03:hover{
+  opacity: .85;
 }
 
 nav {
@@ -37,14 +68,15 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
     color: #455A64;
     font-weight: bold;
     /* Nav Bar text colour*/
-    background-color: : #607D8B;
+    background-color: #FFFFFF;
     /*nav bar background colour*/
     display: block;
     line-height: 2em;
@@ -52,20 +84,12 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li:hover {
-    color: #009688;
+nav ul li:hover:not(.active){
+  color: #009688;
 }
-
-.Contact_form h2, .Contact_form label {
-    font-family: 'Muli', sans-serif;
+.active{
+  color: #009688;
 }
-
-.form_hint, .required_notification {
-    font-size: 0.688em;
-}
-
-
-/* This block(above) of CSS is all about typography, font size, family for each section*/
 
 .Contact_form ul {
     /* This along with others css sections is used to better structure the form itself, this order anything within a ul element*/
@@ -74,24 +98,33 @@ nav ul li:hover {
     list-style-position: outside;
     margin: 0px;
     padding: 0px;
+
 }
 
 .Contact_form li {
     /* this section structures anything within a li element by adding spacing*/
     list-style-type: none;
-    padding: 12px;
-    border-bottom: 1px solid #eee;
+    padding: 15px;
     position: relative;
 }
 
-.Contact_form li:first-child, .Contact_form li:last-child {
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.500em;
+}
+
+.Contact_form li:first-child,
+.Contact_form li:last-child {
     /* This creates a line above & below the form. First li to the last li*/
     border-bottom: 1px solid #777;
     /* This is the style of border, thin, solid line*/
 }
 
 .Contact_form h2 {
-    /*Basic style for anything under heading 2*/
+    /*Basic style for anything under h2 tag*/
     margin: 0px;
     display: inline;
 }
@@ -99,7 +132,7 @@ nav ul li:hover {
 .required_notification {
     /* More basic styling to notifications*/
     color: #d45252;
-    margin: 5px 0 0 0;
+    margin: -13px 0 0 0;
     display: inline;
     float: right;
 }
@@ -139,46 +172,22 @@ nav ul li:hover {
     transition: padding .25s;
 }
 
+.Contact_form h2, .Contact_form label {
+    font-family: 'Muli', sans-serif;
+}
+
+.form_hint, .required_notification {
+    font-size: 0.688em;
+}
+
+
+/* This block(above) of CSS is all about typography, font size, family for each section*/
+
 .Contact_form input:focus, .Contact_form textarea:focus {
     /*I styled two areas with the same css*/
     background: #fff;
     border: 1px solid #555;
     box-shadow: 0 0 3px #aaa;
-}
-
-
-/*button styling, utilising the various webkits for each browser, giving the button shadow and colour*/
-
-button.submit {
-    position: relative;
-    vertical-align: top;
-    width: 100px;
-    height: 30px;
-    padding: 0;
-    font-size: 0.875em;
-    color: white;
-    text-align: center;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-    background: #1abc9c;
-    border: 0;
-    border-bottom: 2px solid #12ab8d;
-    cursor: pointer;
-    -webkit-box-shadow: inset 0 -2px #12ab8d;
-    box-shadow: inset 0 -2px #12ab8d;
-}
-
-button.submit:hover {
-    /*appearance of the button when hovered over*/
-    opacity: .85;
-    cursor: pointer;
-}
-
-button.submit:active {
-    /*appearance of the button when clicked on*/
-    top: 1px;
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
 }
 
 .Contact_form input, .Contact_form textarea {
@@ -218,7 +227,7 @@ button.submit:active {
     /* I set display to none becuase I only want the hints to show the user focuses on the input fields*/
 }
 
-.form_hint::before {
+.form_hint:before {
     content: "&#x25C0";
     /*left point triangle in unicode*/
     color: #d45252;
@@ -231,6 +240,9 @@ button.submit:active {
     display: inline;
 }
 
+
+/* change form hint color when invalid */
+
 .contact_form input:required:valid+.form_hint {
     background: #28921f;
 }
@@ -241,8 +253,66 @@ button.submit:active {
 .contact_form input:required:valid+.form_hint::before {
     color: #28921f;
 }
+/* Appearance of the button, in its default state*/
+/*button styling, utilising the various webkits for each browser, giving the button shadow and colour*/
 
-/* change form hint arrow color when valid */
+#button_01 {
+    float: center;
+    width: 240px;
+    height: 80px;
+    border: #fbfbfb solid 4px;
+    cursor: pointer;
+    background-color: #009688;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.500em;
+    padding-top: 15px;
+    padding-bottom: 22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 200;
+    text-align:center;
+}
+
+
+/*Appearance of the button when hovered over, it turns it slightly opaque*/
+
+#button_01:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+
+/*Appeareance of the button when clicked, not much changes */
+
+#button_01:active {
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/*Everything below this is point is to do with the footer of the site
+and as such it is the same on ALL CSS pages*/
+.page_wrap {
+    min-height: 100%;
+    /*this is set to be equal to the footer height*/
+
+    margin-bottom: -142px;
+}
+.page_wrap:after {
+    content: "";
+    display: block;
+}
+.site_footer, .page_wrap:after {
+    height: 142px
+}
+.site_footer{
+  background-color: #455A64;
+  color: #ffffff
+
+}
 footer {
     display: flex;
     justify-content: center;
@@ -250,8 +320,7 @@ footer {
     padding: 60px 0;
     background-color: #f8fafa;
 }
-
-#footer-info {
+#footer-information {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -259,7 +328,6 @@ footer {
     text-align: center;
     margin-top: 10px;
 }
-
 #footer-links {
     display: flex;
     justify-content: center;
@@ -267,13 +335,17 @@ footer {
     width: 520px;
     float: right;
 }
-
 #footer-links ul {
     width: 150px;
     float: left;
     margin-left: 20px;
 }
-
 #footer-links ul li {
     margin: 10px 0;
+}
+#footer-links ul li h5{
+  color: #ffffff;
+}
+#footer-links ul li a {
+  color: #ffffff;
 }
