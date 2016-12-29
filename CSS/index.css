@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    max-width: 100%
+    /* This is used to define the height of my html so it can take up all available space*/
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,6 +12,7 @@ body {
     font-family: 'Muli', sans-serif;
     font-size: 0.938em;
     line-height: 1;
+    overflow-x: hidden;
 }
 
 p {
@@ -13,14 +20,16 @@ p {
     margin-bottom: 20px;
 }
 
-/*h1 {
-    font-family: 'Muli', sans-serif;
-    font-weight: bold;
-    color: #444;
-    font-size: 2.813em;
-    margin-bottom: 20px
-}*/
+.icon_01, .icon_02, .icon_03 {
+    margin: 0;
+    padding: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
 
+.icon_01, .icon_02, .icon_03:hover {
+    opacity: .85;
+}
 h2 {
     font-weight: 300;
     color: #444;
@@ -64,11 +73,12 @@ a {
 }
 
 a:hover {
-    color: #02b8dd;
+    color: #009688;
 }
 
 .strong {
     font-weight: bold;
+    color: #ffffff;
 }
 
 small {
@@ -104,14 +114,15 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     color: #455A64;
     font-weight: bold;
     /* Nav Bar text colour*/
-    background-color: : #607D8B;
+    background-color: #FFFFFF;
     /*nav bar background colour*/
     display: block;
     line-height: 2em;
@@ -119,18 +130,22 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li:hover {
-    color: #009688;
+nav ul li:hover:not(.active){
+  color: #009688;
+}
+.active{
+  color: #009688;
 }
 
 #hero-image {
-    height: 580px;
+    height: 700px;
     padding-top: 1px;
     background: #e8eced url("../img/tech.jpg") no-repeat center;
 }
 
 #hero-image h2 {
-    margin: 180px 0 40px 0;
+    margin: 290px 0 40px 0;
+    color: #607D8B;
 }
 
 #features ul {
@@ -143,15 +158,12 @@ nav ul li:hover {
 #features ul li {
     width: 300px;
     padding-top: 140px;
-    margin-right: 10px;
+    margin-right: 0px;
     text-align: center;
 }
 
 #features ul li.feature-1 {
     background: url("../img/GitHub-Mark.png") no-repeat top center;
-}
-#github-logo{
-
 }
 
 #features ul li.feature-2 {
@@ -257,6 +269,21 @@ article h4 {
     color: #fff;
 }
 
+.page_wrap {
+    min-height: 100%;
+    /*this is set to be equal to the footer height*/
+    margin-bottom: -142px;
+}
+
+.page_wrap:after {
+    content: "";
+    display: block;
+}
+
+.site_footer, .page_wrap:after {
+    height: 142px
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -265,7 +292,12 @@ footer {
     background-color: #f8fafa;
 }
 
-#footer-info {
+.site_footer {
+    background-color: #455A64;
+    color: #ffffff
+}
+
+#footer-information {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -290,4 +322,12 @@ footer {
 
 #footer-links ul li {
     margin: 10px 0;
+}
+
+#footer-links ul li h5 {
+    color: #ffffff;
+}
+
+#footer-links ul li a {
+    color: #ffffff;
 }
