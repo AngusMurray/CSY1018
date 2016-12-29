@@ -7,9 +7,9 @@
 
 html, body {
     height: 100%;
+    font-family: 'Muli', sans-serif;
     /* This is used to define the height of my html so it can take up all available space*/
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -27,12 +27,15 @@ a {
     text-decoration: none;
     color: #444;
 }
+
 ul {
     list-style: none;
 }
-h2{
-  border-bottom: 1px solid #777;
+
+h2 {
+    border-bottom: 1px solid #777;
 }
+
 h5 {
     font-size: 0.938em;
     color: #444;
@@ -43,15 +46,17 @@ h5 {
 a:hover {
     color: #009688;
 }
-.icon_01, .icon_02, .icon_03{ /* This is the layout for the icons on each page*/
-  margin: 0;
-  padding: 10px;
-  display: inline-flex;
-  flex-wrap: wrap;
 
+.icon_01, .icon_02, .icon_03 {
+    /* This is the layout for the icons on each page*/
+    margin: 0;
+    padding: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
-.icon_01, .icon_02, .icon_03:hover{
-  opacity: .85;
+
+.icon_01, .icon_02, .icon_03:hover {
+    opacity: .85;
 }
 
 nav {
@@ -68,8 +73,8 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-flex;
-  flex-wrap: wrap;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -84,11 +89,12 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li:hover:not(.active){
-  color: #009688;
+nav ul li:hover:not(.active) {
+    color: #009688;
 }
-.active{
-  color: #009688;
+
+.active {
+    color: #009688;
 }
 
 .Contact_form ul {
@@ -98,7 +104,6 @@ nav ul li:hover:not(.active){
     list-style-position: outside;
     margin: 0px;
     padding: 0px;
-
 }
 
 .Contact_form li {
@@ -116,8 +121,7 @@ form {
     font-size: 1.500em;
 }
 
-.Contact_form li:first-child,
-.Contact_form li:last-child {
+.Contact_form li:first-child, .Contact_form li:last-child {
     /* This creates a line above & below the form. First li to the last li*/
     border-bottom: 1px solid #777;
     /* This is the style of border, thin, solid line*/
@@ -164,13 +168,13 @@ form {
     border: 1px solid #aaa;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius: 2px;
-    padding-right: 70px;
     -moz-transition: padding .25s;
     /* style for various web browsers, each one has a different type of webkit, and uses different words*/
-    -webkit-transition: padding .25s;
+    -webkit-transition:padding .25s;
     -o-transition: padding .25s;
     transition: padding .25s;
-}
+  }
+
 
 .Contact_form h2, .Contact_form label {
     font-family: 'Muli', sans-serif;
@@ -180,34 +184,29 @@ form {
     font-size: 0.688em;
 }
 
-
 /* This block(above) of CSS is all about typography, font size, family for each section*/
 
 .Contact_form input:focus, .Contact_form textarea:focus {
     /*I styled two areas with the same css*/
+    padding: 30px;
     background: #fff;
     border: 1px solid #555;
     box-shadow: 0 0 3px #aaa;
 }
 
-.Contact_form input, .Contact_form textarea {
-    padding-right: 30px;
-}
-
-.Contact_form input:required, .Contact_form textarea:required {
+ input:required, textarea:required {
     background: #fff url("../img/Red_Asterisk.png")no-repeat 98% center;
 }
 
-.Contact_form input:focus:invalid, .Contact_form textarea:focus:invalid {
+ input:focus:invalid, textarea:focus:invalid {
     background: #fff url("../img/invalid.png") no-repeat 98% center;
     box-shadow: 0 0 5px #d45252;
     border-color: #b03535;
 }
 
-
 /* when a field is considered invalid by the browser */
 
-.contact_form input:required:valid, .contact_form textarea:required:valid {
+input:required:valid,  textarea:required:valid {
     /* when a field is considered valid by the browser */
     background: #fff url("../img/valid.png") no-repeat 98% center;
     box-shadow: 0 0 5px #5cd053;
@@ -253,34 +252,35 @@ form {
 .contact_form input:required:valid+.form_hint::before {
     color: #28921f;
 }
+
+
 /* Appearance of the button, in its default state*/
+
+
 /*button styling, utilising the various webkits for each browser, giving the button shadow and colour*/
 
 #button_01 {
-    float: center;
+    display: block;
+    margin: 0 auto;
     width: 240px;
     height: 80px;
-    border: #fbfbfb solid 4px;
-    cursor: pointer;
-    background-color: #009688;
-    color: white;
-    font-family: 'Muli', sans-serif;
-    font-size: 1.500em;
-    padding-top: 15px;
+    border: 2px solid #009688;
+    background-color: #FFFFFF;
+    color: #009688;
+    border-radius: 3px;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
     padding-bottom: 22px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    margin-top: -4px;
-    font-weight: 200;
-    text-align:center;
 }
 
 
 /*Appearance of the button when hovered over, it turns it slightly opaque*/
 
 #button_01:hover {
-    opacity: .85;
+    background-color: #009688;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -293,26 +293,31 @@ form {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+
 /*Everything below this is point is to do with the footer of the site
 and as such it is the same on ALL CSS pages*/
+
 .page_wrap {
     min-height: 100%;
     /*this is set to be equal to the footer height*/
-
     margin-bottom: -142px;
 }
+
 .page_wrap:after {
     content: "";
     display: block;
 }
+
 .site_footer, .page_wrap:after {
     height: 142px
 }
-.site_footer{
-  background-color: #455A64;
-  color: #ffffff
 
+.site_footer {
+    background-color: #455A64;
+    color: #ffffff
 }
+
 footer {
     display: flex;
     justify-content: center;
@@ -320,6 +325,7 @@ footer {
     padding: 60px 0;
     background-color: #f8fafa;
 }
+
 #footer-information {
     display: flex;
     justify-content: center;
@@ -328,6 +334,7 @@ footer {
     text-align: center;
     margin-top: 10px;
 }
+
 #footer-links {
     display: flex;
     justify-content: center;
@@ -335,17 +342,21 @@ footer {
     width: 520px;
     float: right;
 }
+
 #footer-links ul {
     width: 150px;
     float: left;
     margin-left: 20px;
 }
+
 #footer-links ul li {
     margin: 10px 0;
 }
-#footer-links ul li h5{
-  color: #ffffff;
+
+#footer-links ul li h5 {
+    color: #ffffff;
 }
+
 #footer-links ul li a {
-  color: #ffffff;
+    color: #ffffff;
 }

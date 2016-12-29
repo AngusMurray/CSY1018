@@ -223,19 +223,19 @@ nav ul li:hover:not(.active){
 }
 
 article h4 {
-    border-bottom: 1px solid #02b8dd;
+    border-bottom: 1px solid #009688;
     padding-bottom: 20px;
 }
 
-.more-link {
-    border: 1px solid #02b8dd;
-    color: #02b8dd;
+.button_01 {
+    border: 1px solid #009688;
+    color: #009688;
     padding: 6px 20px;
     border-radius: 3px;
 }
 
-.more-link:hover {
-    background-color: #02b8dd;
+.button_01:hover {
+    background-color: #009688;
     color: #fff;
 }
 
@@ -248,15 +248,15 @@ article h4 {
     display: block;
     margin: 0 auto 20px auto;
     width: 400px;
-    border-bottom: 1px solid #02b8dd;
+    border-bottom: 1px solid #009688;
     padding: 0 0 20px 0;
 }
 
-.button-2 {
+.button_02 {
     display: block;
     margin: 0 auto;
-    border: 2px solid #02b8dd;
-    color: #02b8dd;
+    border: 2px solid #009688;
+    color: #009688;
     border-radius: 3px;
     width: 180px;
     height: 50px;
@@ -264,8 +264,8 @@ article h4 {
     line-height: 50px;
 }
 
-.button-2:hover {
-    background-color: #02b8dd;
+.button_02:hover {
+    background-color: #009688;
     color: #fff;
 }
 

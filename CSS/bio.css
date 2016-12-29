@@ -24,25 +24,29 @@ a {
 a:hover {
     color: #009688;
 }
-.icon_01, .icon_02, .icon_03{
-  margin: 0;
-  padding: 10px;
-  display: inline-flex;
-  flex-wrap: wrap;
 
+.icon_01, .icon_02, .icon_03 {
+    margin: 0;
+    padding: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
-.icon_01, .icon_02, .icon_03:hover{
-  opacity: .85;
+
+.icon_01, .icon_02, .icon_03:hover {
+    opacity: .85;
 }
+
 ul {
     list-style: none;
 }
+
 h5 {
     font-size: 0.938em;
     color: #444;
     font-weight: bold;
     text-transform: uppercase;
 }
+
 nav {
     background-color: #FFFFFF;
     /* Nav Bar text box colour*/
@@ -57,8 +61,8 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-flex;
-  flex-wrap: wrap;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -73,26 +77,38 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li:hover:not(.active){
-  color: #009688;
+nav ul li:hover:not(.active) {
+    color: #009688;
 }
-.active{
-  color: #009688;
-}
-p, h2{
-  display: flex;
-  margin: 20px;
-  font-size: 1.2em;
-}
-.page_title_banner{
-  background-color: #607D8B;
-  height: 80px;
-  color: #ffffff;
-  margin-top: -50px;
-  padding-top: 30px;
-  padding-left: 100px;
-  margin-left: -80px;
 
+.active {
+    color: #009688;
+}
+
+.page_title_banner {
+    background-color: #607D8B;
+    height: 80px;
+    color: #ffffff;
+    margin-top: -50px;
+    padding-top: 30px;
+    padding-left: 100px;
+    margin-left: -80px;
+    font-size: 1.500em;
+}
+
+p, h2 {
+    display: flex;
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+h2, p1 {
+    margin-left: 327px;
+    margin-top: -50px;
+}
+
+img {
+    padding-right: 10px;
 }
 
 .page_wrap {
@@ -109,10 +125,12 @@ p, h2{
 .site_footer, .page_wrap:after {
     height: 142px
 }
-.site_footer{
-  background-color: #455A64;
-  color: #ffffff
+
+.site_footer {
+    background-color: #455A64;
+    color: #ffffff
 }
+
 footer {
     display: flex;
     justify-content: center;
@@ -147,9 +165,11 @@ footer {
 #footer-links ul li {
     margin: 10px 0;
 }
-#footer-links ul li h5{
-  color: #ffffff;
+
+#footer-links ul li h5 {
+    color: #ffffff;
 }
+
 #footer-links ul li a {
-  color: #ffffff;
+    color: #ffffff;
 }
