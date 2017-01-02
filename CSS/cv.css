@@ -208,6 +208,30 @@ nav ul li:hover:not(.active) {
     width: 190px;
     padding: 20px;
   }
+  #fourth-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    text-align: center;
+    list-style-type: circle;
+    font-size: 1.1em;
+  }
+  #fourth-content article{
+    width: 460px;
+    height: 270px;
+    background-color: #f5f5f5;
+    margin-top: -50px;
+  }
+  #fourth-content article:first-child{
+    margin-right: 20px;
+  }
+  #fourth-content article .overlay{
+    background: rgba(255, 255, 255, .95);
+    height: 230px;
+    width: 190px;
+    padding: 20px;
+  }
 .page_wrap {
     min-height: 100%;
     /*this is set to be equal to the footer height*/
