@@ -1,3 +1,4 @@
+/*Angus Murray - 16427367*/
 html, body {
     height: 100%;
     /* This is used to define the height of my html so it can take up all available space*/
@@ -51,7 +52,7 @@ nav {
     background-color: #FFFFFF;
     /* Nav Bar text box colour*/
     margin-top: 5px;
-    overflow: hidden;
+    overflow: hidden; /*This makes sure that anything that goes beyond the bounds of the screen is hidden and therefore not shown */
     float: right;
 }
 

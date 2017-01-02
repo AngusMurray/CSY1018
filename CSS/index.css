@@ -1,3 +1,4 @@
+/*Angus Murray - 16427367*/
 html, body {
     height: 100%;
     max-width: 100%
@@ -140,14 +141,14 @@ nav ul li:hover:not(.active){
 #hero-image {
     height: 700px;
     padding-top: 1px;
-    background: #e8eced url("../img/tech.jpg") no-repeat center;
-}
+  background: #e8eced url("../img/tech.jpg") no-repeat center;
+  }
 
 #hero-image h2 {
     margin: 290px 0 40px 0;
     color: #607D8B;
-}
 
+}
 #features ul {
     margin: 80px -100px;
     display: flex;
